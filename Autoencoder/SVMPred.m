@@ -8,6 +8,6 @@ function preds = SVMPred(model_param, X)
             K(j) = model_param.kernel(X(i,:), model_param.X(j,:));
         end
         f = sum(model_param.a .* model_param.y .* K) + model_param.b;
-        preds(i) = (f >= 0);  % 输出二分类结果：1 或 0
+        preds(i) = (f >= 0);  
     end
 end
